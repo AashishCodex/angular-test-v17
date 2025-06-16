@@ -1,6 +1,11 @@
 <h2>Products</h2>
 
-<div *ngFor="let product of products">
+<div class="form-group">
+  <input type="number" class="form-control" placeholder="Enter something" [(ngModel)]="inputValue" (input)="onInputChange($event)" (blur)="onInputBlur()">
+</div>
+
+<ngx-slider [(value)]="value" [options]="options" (valueChange)="onSliderChange($event)"></ngx-slider>
+<!-- <div *ngFor="let product of products">
 
   <h3>
     <a
@@ -23,4 +28,4 @@
     (notify)="onNotify()">
   </app-product-alerts>
 
-</div>
+</div> -->
